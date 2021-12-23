@@ -29,5 +29,15 @@
       "import": "./dist/mockman.es.js",
       "require": "./dist/mockman.umd.js"
     }
-  }
+  },
+  "keywords": [
+    "miragejs",
+    "vitejs",
+    "react-component",
+    "vitejs",
+    "npm-package",
+    "web",
+    "mock-backend",
+    "mock-server"
+  ]
 }
