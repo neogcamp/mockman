@@ -1,9 +1,6 @@
 import * as React from "react";
-import useData from "../context/data";
-
 import ReactJson from "react-json-view";
-const InputResponse = () => {
-  const { data } = useData();
+const InputResponse = ({ data }) => {
   let RJsonProps = {
     displayObjectSize: false,
     name: false,
@@ -12,17 +9,26 @@ const InputResponse = () => {
   };
   return (
     <div className="responseData">
-      <div>
-        Status : {data.response.status} {data.response.statusText}
-      </div>
-      <div>
-        <h3 className="title">Response: </h3>
-        <ReactJson src={data.response.data || data.response} {...RJsonProps} />
-      </div>
-      <div>
-        <h3 className="title">Headers:</h3>
-        <ReactJson src={data.response.headers} {...RJsonProps} />
-      </div>
+      {data.response == undefined ? (
+        <div>Response is undefined.</div>
+      ) : (
+        <>
+          <div>
+            Status : {data.response.status} {data.response.statusText}
+          </div>
+          <div>
+            <h3 className="title">Response: </h3>
+            <ReactJson
+              src={data.response.data || data.response}
+              {...RJsonProps}
+            />
+          </div>
+          <div>
+            <h3 className="title">Headers:</h3>
+            <ReactJson src={data.response.headers} {...RJsonProps} />
+          </div>
+        </>
+      )}
     </div>
   );
 };

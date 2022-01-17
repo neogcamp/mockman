@@ -1,20 +1,22 @@
 import * as React from "react";
 import axios from "axios";
-import useData from "../context/data";
-//why is headers empty
 
-const InputForm = ({ error }) => {
-  const { data, setData } = useData();
-
+const InputForm = ({ data, setData }) => {
   const APICall = async (endpoint, reqType) => {
-    const req = async (reqq) => {
+    const req = async () => {
+      let reqOptions = {
+        url: endpoint,
+        method: reqType,
+        headers: data.headers,
+        data: JSON.parse(data.body),
+      };
+
       try {
-        const response = await axios[reqq](endpoint, {
-          body: JSON.parse(data.body),
-          headers: data.headers,
-        });
+        const response = await axios.request(reqOptions);
         setData({ ...data, response });
+        console.log(response, "response");
       } catch (err) {
+        console.log(err, "error");
         if (err.description == "Mirage: undefined") {
           setData({ ...data, response: err });
         } else {
@@ -22,20 +24,7 @@ const InputForm = ({ error }) => {
         }
       }
     };
-
-    switch (reqType) {
-      case "GET":
-        req("get");
-        break;
-      case "POST":
-        req("post");
-        break;
-      case "DELETE":
-        req("delete");
-        break;
-      default:
-        break;
-    }
+    req();
   };
   return (
     <div className="inputForm">
@@ -55,7 +44,7 @@ const InputForm = ({ error }) => {
       />
       <button
         onClick={() => APICall(data.endpoint, data.reqType)}
-        disabled={error !== null}
+        // disabled={error !== null}
       >
         Submit{" "}
       </button>

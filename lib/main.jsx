@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { useState } from "react";
 import "./main.css";
 import InputForm from "./components/InputForm";
@@ -12,16 +12,29 @@ Test the component by importing Mockman in src/main.tsx and run yarn dev to see 
 */
 
 function Mockman() {
+  const defaultState = {
+    reqType: "GET",
+    endpoint: "/",
+    body: "{}",
+    headers: {},
+    response: {},
+  };
   const [error, setError] = useState(null);
+  const [data, setData] = useState(defaultState);
 
   return (
     <div className="mockman">
       <div className="request-wrapper">
-        <InputForm error={error} />
-        <InputContent error={error} setError={setError} />
+        <InputForm data={data} setData={setData} />
+        <InputContent
+          data={data}
+          setData={setData}
+          error={error}
+          setError={setError}
+        />
       </div>
       <div className="response-wrapper">
-        <InputResponse />
+        <InputResponse data={data} />
       </div>
     </div>
   );

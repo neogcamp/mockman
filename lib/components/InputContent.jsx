@@ -1,9 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
-import useData from "../context/data";
 
-const InputContent = ({ error, setError }) => {
-  const { data, setData } = useData();
+const InputContent = ({ error, setError, data, setData }) => {
   const [dataHeaders, setDataHeaders] = useState([
     {
       isUsed: true,
@@ -17,11 +15,14 @@ const InputContent = ({ error, setError }) => {
     },
   ]);
   React.useEffect(() => {
+    let h = {};
+    const head = dataHeaders
+      .filter(({ isUsed }) => isUsed === true)
+      .map((e) => (h = { ...h, [e.header]: e.value }));
+
     setData({
       ...data,
-      headers: dataHeaders
-        .filter(({ isUsed }) => isUsed === true)
-        .map((e) => ({ [e.header]: e.value })),
+      headers: h,
     });
   }, [dataHeaders]);
 
@@ -101,7 +102,6 @@ const InputContent = ({ error, setError }) => {
         />
         <p className="error">{error !== null && error}</p>
       </div>
-      <h3 className="title">Auth:</h3>
     </div>
   );
 };
