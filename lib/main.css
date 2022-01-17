@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+select {
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png)
+    94% / 15% no-repeat #fff;
+}
+
+input {
+  font-size: 16px;
+  padding: 5px 35px 5px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  font-size: 16px;
+  padding: 5px 25px;
+  border: 1px solid rgb(24, 93, 153);
+  border-radius: 5px;
+  background-color: rgb(24, 93, 153);
+  color: white;
+}
+button:disabled {
+  background-color: rgb(86, 115, 140);
+  color: grey;
+}
+
+.mockman {
+  max-width: 1200px;
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+.request-wrapper {
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgb(24, 93, 153);
+  margin: 10px;
+  border-radius: 5px;
+}
+.inputForm {
+  padding-bottom: 2rem;
+  display: flex;
+
+  justify-content: space-around;
+}
+.response-wrapper {
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgb(24, 93, 153);
+  margin: 10px;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+.title {
+  font-weight: 300;
+  border-bottom: 2px solid rgb(24, 93, 153);
+  width: fit-content;
+  padding-block: 0.3rem;
+}
+textarea {
+  width: 100%;
+  border: 1px solid rgb(24, 93, 153);
+  height: 150px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.error {
+  color: rgb(124, 24, 24);
+  padding: 1rem;
+}
+
+.inputHeadersItem {
+  display: flex;
+  padding: 5px;
+}
+.inputHeadersItem span {
+  padding-inline: 5px;
+}
