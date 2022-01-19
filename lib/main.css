@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-select {
+.mockman select {
   padding: 5px 35px 5px 5px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -14,13 +9,13 @@ select {
     94% / 15% no-repeat #fff;
 }
 
-input {
+.mockman input {
   font-size: 16px;
   padding: 5px 35px 5px 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-button {
+.mockman button {
   font-size: 16px;
   padding: 5px 25px;
   border: 1px solid rgb(24, 93, 153);
@@ -28,7 +23,7 @@ button {
   background-color: rgb(24, 93, 153);
   color: white;
 }
-button:disabled {
+.mockman button:disabled {
   background-color: rgb(86, 115, 140);
   color: grey;
 }

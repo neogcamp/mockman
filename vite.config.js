@@ -4,6 +4,7 @@ const { defineConfig } = require("vite");
 
 module.exports = defineConfig({
   plugins: [reactRefresh()],
+  minify: true,
   build: {
     lib: {
       entry: resolve(__dirname, "lib/main.jsx"),

@@ -1,8 +1,9 @@
 {
-  "name": "mockman",
-  "version": "1.0.0",
+  "name": "mockman-js",
+  "version": "0.1.0",
   "files": [
-    "dist"
+    "dist/*.css",
+    "dist/*.js"
   ],
   "main": "./dist/mockman.umd.js",
   "module": "./dist/mockman.es.js",
@@ -25,8 +26,14 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/mockman.es.js",
-      "require": "./dist/mockman.umd.js"
+      "import": [
+        "./dist/mockman.es.js",
+        "./dist/mockman-styles.css"
+      ],
+      "require": [
+        "./dist/mockman.umd.js",
+        "./dist/mockman-styles.css"
+      ]
     }
   },
   "keywords": [
