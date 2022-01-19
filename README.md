@@ -64,7 +64,6 @@ we encourage to have a dedicated route called `/mock-api` on your frontend app w
 */
 
 import React from "react";
-import "./App.css";
 import Mockman from "mockman-js";
 function MockAPI() {
   return (
