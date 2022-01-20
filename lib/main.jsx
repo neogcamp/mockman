@@ -14,7 +14,7 @@ Test the component by importing Mockman in src/main.tsx and run yarn dev to see 
 function Mockman() {
   const defaultState = {
     reqType: "GET",
-    endpoint: "/",
+    endpoint: "/api/test-todos",
     body: "{}",
     headers: {},
     response: {},
