@@ -11,7 +11,7 @@ Add dependencies as per requirement
 Test the component by importing Mockman in src/main.tsx and run yarn dev to see the component in action 
 */
 
-function Mockman() {
+function Mockman({ colorScheme = "standard" }) {
   const defaultState = {
     reqType: "GET",
     endpoint: "/api/test-todos",
@@ -23,8 +23,8 @@ function Mockman() {
   const [data, setData] = useState(defaultState);
 
   return (
-    <div className="mockman">
-      <div className="request-wrapper">
+    <div className={`mockman`}>
+      <div className={`request-wrapper mockman-${colorScheme}`}>
         <InputForm data={data} setData={setData} />
         <InputContent
           data={data}
@@ -33,7 +33,7 @@ function Mockman() {
           setError={setError}
         />
       </div>
-      <div className="response-wrapper">
+      <div className={`response-wrapper mockman-${colorScheme}`}>
         <InputResponse data={data} />
       </div>
     </div>
