@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/neogcamp/mockman" rel="noopener" target="_blank"><img src="https://github.com/neogcamp/mockman/tree/main/src/assets/Mockman.png" width="120" height="120" align="center"/></a>
+  <a href="https://github.com/neogcamp/mockman" rel="noopener" target="_blank"><img src="https://github.com/neogcamp/mockman/blob/main/src/assets/Mockman.png" width="120" height="120" align="center"/></a>
 
 </p>
 
