@@ -1,42 +1,89 @@
-/* .App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  margin: 2rem 5%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 90vh;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.hero {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero__content-header {
+  margin-top: 6rem;
+  padding: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffce6d;
+  font-family: "Anton", sans-serif;
+}
+
+.hero__content-CTA span {
+  padding: 0.2rem;
+  background-color: white;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  color: #120200;
+  cursor: pointer;
+}
+
+.hero__content-CTA {
+  display: flex;
+  align-items: center;
+}
+
+.github-logo {
   color: white;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.npm-logo {
+  color: white;
+  font-size: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.guidelines {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.guidelines a {
+  color: #ffce6d;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .mockmanjs {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero__content-header {
+    margin-top: 0rem;
+  }
+
+  .mobile-view {
+    display: block;
   }
 }
-
-button {
-  font-size: calc(10px + 2vmin);
-} */

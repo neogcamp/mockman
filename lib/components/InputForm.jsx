@@ -39,6 +39,7 @@ const InputForm = ({ data, setData }) => {
         <option value="DELETE">DELETE</option>
       </select>
       <input
+        defaultValue={data.endpoint}
         onChange={(e) => setData({ ...data, endpoint: e.target.value })}
         placeholder="Enter your endpoint"
       />
