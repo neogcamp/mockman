@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://github.com/neogcamp/mockman" rel="noopener" target="_blank"><img src="https://github.com/neogcamp/mockman/blob/main/src/assets/Mockman.png" width="120" height="120" align="center"/></a>
+
+</p>
+
 <h1 align="center"><b>MockmanJS</b></h1>
 <p align="center">
 <a href="https://badge.fury.io/js/mockman-js"><img src="https://badge.fury.io/js/mockman-js.svg" alt="npm version" height="18"></a>
@@ -57,7 +62,7 @@ yarn add mockman-js
 
 ## **🛠️ Usage**
 
-### Import the component in your App
+### **Import the component in your App**
 
 ```jsx
 /*
@@ -77,7 +82,7 @@ function MockAPI() {
 export default MockAPI;
 ```
 
-### Import Styles
+### **Import Styles**
 
 In your `index.html`, add the following:
 
@@ -89,6 +94,16 @@ In your `index.html`, add the following:
 ```
 
 You can always override the default styles by defining your custom css.
+
+### **Color Scheme**
+
+Mockman currently supports `colorScheme` prop to define color scheme to Mockman component.
+
+The `colorScheme` prop currently accepts two values - "standard" (default) and "dark".
+
+```jsx
+<Mockman colorScheme="dark" />
+```
 
 ---
 

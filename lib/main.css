@@ -29,15 +29,23 @@
 }
 
 .mockman {
-  max-width: 1200px;
+  text-align: left;
   display: grid;
-  padding: 2rem;
   grid-template-columns: 1fr 1fr;
   margin: auto;
 }
+
+.mockman-standard {
+  color: black;
+  background-color: white;
+}
+
+.mockman-dark {
+  color: white;
+  background-color: black;
+}
 .request-wrapper {
-  padding: 3rem;
-  background-color: rgba(0, 0, 0, 0.02);
+  padding: 4rem;
   border: 1px solid rgb(24, 93, 153);
   margin: 10px;
   border-radius: 5px;
@@ -49,8 +57,8 @@
   justify-content: space-around;
 }
 .response-wrapper {
-  padding: 3rem;
-  background-color: rgba(0, 0, 0, 0.02);
+  min-width: 10rem;
+  padding: 4rem;
   border: 1px solid rgb(24, 93, 153);
   margin: 10px;
   border-radius: 5px;
@@ -84,4 +92,12 @@ textarea {
 }
 .inputHeadersItem span {
   padding-inline: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .mockman {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: auto;
+  }
 }
