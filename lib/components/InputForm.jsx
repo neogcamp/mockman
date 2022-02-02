@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 
-const InputForm = ({ data, setData, colorScheme }) => {
+const InputForm = ({ data, setData, colorScheme, endpointsList }) => {
   const APICall = async (endpoint, reqType) => {
     const req = async () => {
       let reqOptions = {
@@ -26,6 +26,7 @@ const InputForm = ({ data, setData, colorScheme }) => {
     };
     req();
   };
+  console.log(data);
   return (
     <div className="inputForm">
       <select
@@ -39,16 +40,22 @@ const InputForm = ({ data, setData, colorScheme }) => {
         <option value="POST">POST</option>
         <option value="DELETE">DELETE</option>
       </select>
+
       <input
+        type="input"
+        list="optionsList"
         defaultValue={data.endpoint}
         onChange={(e) => setData({ ...data, endpoint: e.target.value })}
         placeholder="Enter your endpoint"
         className={colorScheme == "dark" && "dark"}
       />
-      <button
-        onClick={() => APICall(data.endpoint, data.reqType)}
-        // disabled={error !== null}
-      >
+      <datalist id="optionsList">
+        {endpointsList.map((o) => (
+          <option key={o}>{o}</option>
+        ))}
+      </datalist>
+
+      <button onClick={() => APICall(data.endpoint, data.reqType)}>
         Submit{" "}
       </button>
     </div>
