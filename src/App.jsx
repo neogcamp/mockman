@@ -35,7 +35,7 @@ function App() {
         </div>
 
         <div className="mockmanjs">
-          <Mockman />
+          <Mockman colorScheme="dark" />
           <div className="guidelines">
             <p>
               To test the above TODO-app, you can find it's mock-API

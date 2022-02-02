@@ -25,16 +25,17 @@ function Mockman({ colorScheme = "standard" }) {
   return (
     <div className={`mockman`}>
       <div className={`request-wrapper mockman-${colorScheme}`}>
-        <InputForm data={data} setData={setData} />
+        <InputForm data={data} setData={setData} colorScheme={colorScheme} />
         <InputContent
           data={data}
           setData={setData}
           error={error}
           setError={setError}
+          colorScheme={colorScheme}
         />
       </div>
       <div className={`response-wrapper mockman-${colorScheme}`}>
-        <InputResponse data={data} />
+        <InputResponse data={data} colorScheme={colorScheme} />
       </div>
     </div>
   );

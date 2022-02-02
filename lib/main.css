@@ -2,11 +2,7 @@
   padding: 5px 35px 5px 5px;
   font-size: 16px;
   border: 1px solid #ccc;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url(https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png)
-    94% / 15% no-repeat #fff;
+  border-radius: 5px;
 }
 
 .mockman input {
@@ -63,6 +59,7 @@
   margin: 10px;
   border-radius: 5px;
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .title {
   font-weight: 300;
@@ -80,6 +77,10 @@ textarea {
   letter-spacing: 1px;
   line-height: 1.5;
   font-size: 16px;
+}
+.dark {
+  background-color: black;
+  color: white;
 }
 .error {
   color: rgb(124, 24, 24);

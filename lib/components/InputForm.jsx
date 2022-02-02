@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 
-const InputForm = ({ data, setData }) => {
+const InputForm = ({ data, setData, colorScheme }) => {
   const APICall = async (endpoint, reqType) => {
     const req = async () => {
       let reqOptions = {
@@ -33,6 +33,7 @@ const InputForm = ({ data, setData }) => {
         id="reqType"
         defaultValue="GET"
         onChange={(e) => setData({ ...data, reqType: e.target.value })}
+        className={colorScheme == "dark" && "dark"}
       >
         <option value="GET">GET</option>
         <option value="POST">POST</option>
@@ -42,6 +43,7 @@ const InputForm = ({ data, setData }) => {
         defaultValue={data.endpoint}
         onChange={(e) => setData({ ...data, endpoint: e.target.value })}
         placeholder="Enter your endpoint"
+        className={colorScheme == "dark" && "dark"}
       />
       <button
         onClick={() => APICall(data.endpoint, data.reqType)}
