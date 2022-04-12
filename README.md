@@ -109,9 +109,9 @@ The `colorScheme` prop currently accepts two values - "standard" (default) and "
 
 ## **💖 We love Contributions**
 
-- **mockBEE** is truly Open Source. Any sort of contribution to this project are highly appreciated. Create a branch, add commits, and [open a pull request](https://github.com/neogcamp/mockBee/compare).
+- **mockman** is truly Open Source. Any sort of contribution to this project are highly appreciated. Create a branch, add commits, and [open a pull request](https://github.com/neogcamp/mockman/compare).
 
-- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to **mockBEE**.
+- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to **mockman**.
 
 ---
 
