@@ -2,7 +2,6 @@
   <a href="https://github.com/neogcamp/mockman" rel="noopener" target="_blank"><img src="https://github.com/neogcamp/mockman/blob/main/src/assets/Mockman.png" width="120" height="120" align="center"/></a>
 
 </p>
-<img src="https://github.com/neogcamp/mockman/blob/main/src/assets/MockImg.png" alt="mockman" />
 <h1 align="center"><b>MockmanJS</b></h1>
 <p align="center">
 <a href="https://badge.fury.io/js/mockman-js"><img src="https://badge.fury.io/js/mockman-js.svg" alt="npm version" height="18"></a>
@@ -33,6 +32,9 @@
 </p>
 
 ---
+
+<img src="https://github.com/neogcamp/mockman/blob/main/src/assets/MockImg.png" alt="mockman" />
+
 
 ## **🤔 About**
 
