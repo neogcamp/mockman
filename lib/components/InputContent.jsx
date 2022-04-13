@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
-const InputContent = ({ error, setError, data, setData }) => {
+const InputContent = ({ error, setError, data, setData, colorScheme }) => {
   const [dataHeaders, setDataHeaders] = useState([
     {
       isUsed: true,
@@ -80,15 +80,18 @@ const InputContent = ({ error, setError, data, setData }) => {
                 value={dataItem.isUsed}
                 defaultChecked={dataItem.isUsed}
                 onChange={(e) => toggleChecked(e.target.value, dataItem)}
+                className={colorScheme == "dark" && "dark"}
               />
               <input
                 defaultValue={dataItem.header}
                 onChange={(e) => change(e, dataItem, "header")}
+                className={colorScheme == "dark" && "dark"}
               />
               <span> : </span>
               <input
                 defaultValue={dataItem.value}
                 onChange={(e) => change(e, dataItem, "value")}
+                className={colorScheme == "dark" && "dark"}
               />
             </div>
           );
@@ -99,6 +102,7 @@ const InputContent = ({ error, setError, data, setData }) => {
         <textarea
           defaultValue="{}"
           onChange={(e) => validateInput(e.target.value)}
+          className={colorScheme == "dark" && "dark"}
         />
         <p className="error">{error !== null && error}</p>
       </div>

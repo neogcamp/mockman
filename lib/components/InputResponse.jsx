@@ -1,6 +1,6 @@
 import * as React from "react";
 import ReactJson from "react-json-view";
-const InputResponse = ({ data }) => {
+const InputResponse = ({ data, colorScheme }) => {
   let RJsonProps = {
     displayObjectSize: false,
     name: false,
@@ -19,13 +19,18 @@ const InputResponse = ({ data }) => {
           <div>
             <h3 className="title">Response: </h3>
             <ReactJson
+              theme={colorScheme == "dark" && "threezerotwofour"}
               src={data.response.data || data.response}
               {...RJsonProps}
             />
           </div>
           <div>
             <h3 className="title">Headers:</h3>
-            <ReactJson src={data.response.headers} {...RJsonProps} />
+            <ReactJson
+              theme={colorScheme == "dark" && "threezerotwofour"}
+              src={data.response.headers}
+              {...RJsonProps}
+            />
           </div>
         </>
       )}

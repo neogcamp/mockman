@@ -35,7 +35,14 @@ function App() {
         </div>
 
         <div className="mockmanjs">
-          <Mockman />
+          <Mockman
+            colorScheme="dark"
+            endpointsList={[
+              "/api/test-todos",
+              "/api/auth/signup",
+              "/api/auth/login",
+            ]}
+          />
           <div className="guidelines">
             <p>
               To test the above TODO-app, you can find it's mock-API
